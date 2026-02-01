@@ -11,8 +11,8 @@ window#waybar {
 #workspaces,
 #workspaces button,
 #workspaces button.urgent,
-#workspaces button.empty,
 #workspaces button.persistent,
+#workspaces button.empty,
 #workspaces button.hidden {
     border: none;
     color: #3b3e4c;
