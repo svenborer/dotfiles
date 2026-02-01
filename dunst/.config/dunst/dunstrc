@@ -27,13 +27,13 @@
     width = 400
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    height = 30
 
     # Position the notification in the top right corner
     origin = top-center
 
     # Offset from the origin
-    offset = 0x-33
+    offset = 0x-32
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
 
@@ -210,7 +210,7 @@
     # icon_theme = "Adwaita, breeze"
 
     # Align icons left/right/top/off
-    icon_position = left
+    icon_position = off
 
     # Scale small icons up to this size, set to 0 to disable. Helpful
     # for e.g. small files or high-dpi screens. In case of conflict,
