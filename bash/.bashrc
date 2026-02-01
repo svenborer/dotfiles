@@ -6,6 +6,9 @@ export EDITOR=vim
 export PAGER=less
 export HISTCONTROL="erasedups:ignorespace"
 
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 shopt -s histappend
 
 alias ls='ls --color=auto'
@@ -36,6 +39,18 @@ extract () {
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
+export PATH=$PATH:"$HOME/.local/bin"
+
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
+
+alias mp="source miniprompt"
+mp
+
+alias yt-update='while IFS= read -r line; do yt-dlp -f "bv[height<=720]+ba/b[height<=720]" -o "~/yt/%(channel)s/%(playlist_title)s/%(playlist_index)03d-%(title)s-[%(id)s].%(ext)s" --embed-metadata $line; done < /home/sven/yt.dl'
+
+function tv() {
+    cat ~/downloads/TV7_HLS.m3u | grep -i "$1" -A1
+    cat ~/downloads/TV7_HLS.m3u | grep -i "$1" -A1 | tail -n1 | xargs mpv -
+}
