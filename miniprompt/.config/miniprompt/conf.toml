@@ -1,0 +1,11 @@
+[behaviour]
+colored_exit_status = false
+dirtrim = 4
+
+[primary_prompt]
+prefix = "\[\e]0;\w\a\]"
+ps_content = "</blue>\@ </green>\u@\h </yellow_it>\w "
+ps_suffix = "\n</green>></nc> "
+
+[extensions]
+ext_git = true
