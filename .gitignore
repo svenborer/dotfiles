@@ -3,3 +3,4 @@ vim/.vim/.netrwhist
 vim/.vim/plugged/*
 systemd/.config/systemd/user/timers.target.wants/
 systemd/.config/systemd/user/default.target.wants/
+mpd/.config/mpd/database
