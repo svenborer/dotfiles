@@ -21,7 +21,7 @@ alias k=kubectl
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 
-[[ -f "~/.bash_functions" ]] && source ~/.bash_functions
+[[ -f "$HOME/.bash_functions" ]] && source ~/.bash_functions
 [[ $HOSTNAME == 'eris' && -f "~/.bash_functions_work" ]] && source ~/.bash_functions_work
 
 alias mp="source miniprompt"
