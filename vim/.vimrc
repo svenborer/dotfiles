@@ -113,8 +113,13 @@ set viminfo='100,<9999,s100
 call plug#begin()
  Plug 'itchyny/lightline.vim'
  Plug 'hzchirs/vim-material'
+ Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
-let g:material_style='oceanic'
-set background=dark
-colorscheme vim-material
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
+
+colorscheme tokyonight
