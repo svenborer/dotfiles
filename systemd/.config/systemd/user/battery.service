@@ -1,8 +1,8 @@
 [Unit]
-Description=Battery status 
+Description=Battery Status
 
 [Service]
-ExecStart=/home/sven/.scripts/battery.sh
+ExecStart=/home/sven/.local/scripts/battery.sh
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

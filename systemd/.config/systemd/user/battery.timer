@@ -2,7 +2,7 @@
 Description=Check battery every minute.
 
 [Timer]
-OnCalendar=*-*-* *:*:00
+OnUnitActiveSec=1m
 
 [Install]
 WantedBy=timers.target
