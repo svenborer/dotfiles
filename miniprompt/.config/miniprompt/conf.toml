@@ -4,8 +4,9 @@ dirtrim = 4
 
 [primary_prompt]
 prefix = "\[\e]0;\w\a\]"
-ps_content = "</blue>\@ </green>\u@\h </yellow_it>\w "
+ps_content = "</blue>\@ </green>\u@\h </red_it>\w "
 ps_suffix = "\n</green>></nc> "
 
 [extensions]
 ext_git = true
+ext_kubernetes = true
