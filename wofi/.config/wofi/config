@@ -1,8 +1,0 @@
-style=/home/sven/.config/wofi/style.css
-show=run
-width=400
-height=10
-layer=overlay
-insensitive=true
-prompt=
-location=top
