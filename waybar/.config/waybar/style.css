@@ -1,11 +1,11 @@
 * {
-    font-family: 'Source Code Pro';
-    font-weight: bold;
-    font-size: 12;
+  font-family: "Source Code Pro, Font Awesome 7 Free";
+  font-weight: bold;
+  font-size: 12;
 }
 
 window#waybar {
-    background-color: rgba(15,17,26,1);
+  background-color: #0f111a
 }
 
 #workspaces,
@@ -14,19 +14,20 @@ window#waybar {
 #workspaces button.persistent,
 #workspaces button.empty,
 #workspaces button.hidden {
-    border: none;
-    color: #3b3e4c;
+  border: none;
+  color: #3b3e4c;
 }
 #workspaces button:hover {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 #workspaces button.visible,
 #workspaces button.active {
-    color: #FF5370;
+  color: #ff5370;
 }
 
 #network,
+#custom-wireguard,
 #cpu,
 #disk,
 #battery,
@@ -35,8 +36,9 @@ window#waybar {
 #memory,
 #pulseaudio,
 #window,
+#mpd,
 #clock,
 #bluetooth {
-    margin: 7px;
-    color: #a6accd;
+  margin: 7px;
+  color: #a6accd;
 }
