@@ -2,55 +2,27 @@
 
 [[ $- != *i* ]] && return
 
-export EDITOR=vim
-export PAGER=less
-export HISTCONTROL="erasedups:ignorespace"
-
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export HISTTIMEFORMAT="%d/%m/%y %H:%M:%S "
+export HISTCONTROL=ignorespace
 shopt -s histappend
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias k=kubectl
 
-extract () {
-   if [ -f $1 ] ; then
-       case $1 in
-           *.tar.bz2)   tar xvjf $1 && cd $(echo $1 | sed 's/.tar.bz2//')    ;;
-           *.tar.gz)    tar xvzf $1 && cd $(echo $1 | sed 's/.tar.gz//')    ;;
-           *.bz2)       bunzip2 $1 && cd $(echo $1 | sed 's/.bz2//')    ;;
-           *.rar)       unrar x $1 && cd $(echo $1 | sed 's/.rar//')    ;;
-           *.gz)        gunzip $1 && cd $(echo $1 | sed 's/.gz//')    ;;
-           *.tar)       tar xvf $1 && cd $(echo $1 | sed 's/.tar//')    ;;
-           *.tbz2)      tar xvjf $1 && cd $(echo $1 | sed 's/.tbz2//')    ;;
-           *.tgz)       tar xvzf $1 && cd $(echo $1 | sed 's/.tgz//')    ;;
-           *.zip)       unzip $1 && cd $(echo $1 | sed 's/.zip//')    ;;
-           *.Z)         uncompress $1 && cd $(echo $1 | sed 's/.Z//')    ;;
-           *.7z)        7z x $1 && cd $(echo $1 | sed 's/.7z//')    ;;
-           *)           echo "don't know how to extract '$1'..." ;;
-       esac
-   else
-       echo "'$1' is not a valid file!"
-   fi
-}
-
-[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+[[ $PS1 &&
+  ! ${BASH_COMPLETION_VERSINFO:-} &&
+  -f /usr/share/bash-completion/bash_completion ]] &&
     . /usr/share/bash-completion/bash_completion
-
-#eval "$(starship init bash)"
-export PATH=$PATH:"$HOME/.local/bin"
 
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 
+[[ -f "~/.bash_functions" ]] && source ~/.bash_functions
+[[ $HOSTNAME == 'eris' && -f "~/.bash_functions_work" ]] && source ~/.bash_functions_work
+
 alias mp="source miniprompt"
 mp
-
-alias yt-update='while IFS= read -r line; do yt-dlp -f "bv[height<=720]+ba/b[height<=720]" -o "~/yt/%(channel)s/%(playlist_title)s/%(playlist_index)03d-%(title)s-[%(id)s].%(ext)s" --embed-metadata $line; done < /home/sven/yt.dl'
-
-function tv() {
-    cat ~/downloads/TV7_HLS.m3u | grep -i "$1" -A1
-    cat ~/downloads/TV7_HLS.m3u | grep -i "$1" -A1 | tail -n1 | xargs mpv -
-}
