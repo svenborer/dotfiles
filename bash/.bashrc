@@ -11,6 +11,7 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
+alias gs='git status'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias k=kubectl
@@ -26,5 +27,4 @@ complete -o default -F __start_kubectl k
 [[ -f "$HOME/.bash_functions" ]] && source ~/.bash_functions
 [[ -f "$HOME/.bash_functions_work" ]] && source ~/.bash_functions_work
 
-alias mp="source miniprompt"
-mp
+eval "$(starship init bash)"
