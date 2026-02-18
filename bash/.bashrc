@@ -11,6 +11,8 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 alias ls='ls --color=auto'
 alias ll='ls -la'
+alias gd='git diff'
+alias gds='git diff --staged'
 alias k=kubectl
 
 [[ $PS1 &&
@@ -22,7 +24,7 @@ source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
 
 [[ -f "$HOME/.bash_functions" ]] && source ~/.bash_functions
-[[ $HOSTNAME == 'eris' && -f "~/.bash_functions_work" ]] && source ~/.bash_functions_work
+[[ -f "$HOME/.bash_functions_work" ]] && source ~/.bash_functions_work
 
 alias mp="source miniprompt"
 mp
