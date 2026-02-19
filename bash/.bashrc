@@ -27,4 +27,5 @@ complete -o default -F __start_kubectl k
 [[ -f "$HOME/.bash_functions" ]] && source ~/.bash_functions
 [[ -f "$HOME/.bash_functions_work" ]] && source ~/.bash_functions_work
 
+eval "$(thefuck --alias)"
 eval "$(starship init bash)"

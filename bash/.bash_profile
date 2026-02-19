@@ -15,3 +15,5 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
 export MOZ_ENABLE_WAYLAND=1
 export PATH=$PATH:"$HOME/.local/bin"
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
