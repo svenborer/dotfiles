@@ -36,7 +36,7 @@
     },
     "sway/window": {
       "format": "<span color='#3b3e4c' size='small'>WND</span> {}",
-      "max-length": 50
+      "max-length": 75
     },
     "custom/wireguard": {
         "format": "<span color='#3b3e4c' size='small'>VPN</span> {}",
