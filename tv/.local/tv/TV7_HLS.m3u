@@ -1,10 +1,18 @@
 #EXTM3U
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/1102_SRF1.ch.png" tvg-name="SRF1.ch" group-title="de", SRF 1
-https://api.tv.init7.net/api/live/?channel=b87abb69-d5ed-44c5-8cab-0f7be4ef51b1
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/1104_SRFzwei.ch.png" tvg-name="SRFzwei.ch" group-title="de", SRF zwei
-https://api.tv.init7.net/api/live/?channel=569da6ec-08a0-43c2-a2c1-35be5d3f08b5
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/1106_SRFinfo.ch.png" tvg-name="SRFinfo.ch" group-title="de", SRF info
-https://api.tv.init7.net/api/live/?channel=f670033f-72c6-4bfa-9db7-43f78e428659
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/1102_SRF1.ch.png" "tvg-name="SRF1.ch" tvg-chno="1108" group-title="Deutsch", SRF 1 FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=ed7d7676-9b05-419a-99b4-5f993d238f80
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/1104_SRFzwei.ch.png" "tvg-name="SRFzwei.ch" tvg-chno="1110" group-title="Deutsch", SRF zwei FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=84b6cf07-7fb9-44df-9769-4ecc47100497
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/1106_SRFinfo.ch.png" "tvg-name="SRFinfo.ch" tvg-chno="1112" group-title="Deutsch", SRF info FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=c4fdba91-54a7-4b6e-876e-e16d8f90e375
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/2103_RTS1.ch.png" "tvg-name="RTS1.ch" tvg-chno="2109" group-title="Français", RTS 1 FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=be382348-42aa-488a-a73c-f8ef1f410872
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/2106_RTS2.ch.png" "tvg-name="RTS2.ch" tvg-chno="2112" group-title="Français", RTS 2 FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=c6786c12-83b5-4183-b705-61db667f829a
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/3104_RSILa1.ch.png" "tvg-name="RSILa1.ch" tvg-chno="3112" group-title="Italiano", RSI LA 1 FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=a2776d37-e7c5-4be2-8801-ac500e0917fd
+#EXTINF:0 tvg-logo="https://vtvapi03.sys.init7.net/media/logos/3108_RSILa2.ch.png" "tvg-name="RSILa2.ch" tvg-chno="3116" group-title="Italiano", RSI LA 2 FHD
+https://vtvapi03.sys.init7.net/api/live/?channel=eb0538fc-049a-4447-9d40-46809c5c54ef
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/1114_TV24.ch.png" tvg-name="TV24.ch" group-title="de", TV 24
 https://api.tv.init7.net/api/live/?channel=8f9a650f-4f7a-4df3-8818-90c5a701a075
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/1116_3Plus.ch.png" tvg-name="3plus.ch" group-title="de", 3+ HD
@@ -91,10 +99,6 @@ https://api.tv.init7.net/api/live/?channel=2ba96ca6-dafa-4c10-9a99-bbf4f1032af6
 https://api.tv.init7.net/api/live/?channel=7246c588-f881-4b7b-89d6-a93bcffb9f45
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/1520_TOGGOplus.de.png" tvg-name="TOGGOplus.de" group-title="de", TOGGO plus
 https://api.tv.init7.net/api/live/?channel=34066268-6850-4e36-8164-10ea8f1cc2de
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/2103_RTS1.ch.png" tvg-name="RTS1.ch" group-title="fr", RTS 1
-https://api.tv.init7.net/api/live/?channel=a926f41a-f5ac-4a4a-8638-8d5ccf0dc292
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/2106_RTS2.ch.png" tvg-name="RTS2.ch" group-title="fr", RTS 2
-https://api.tv.init7.net/api/live/?channel=81829585-ce20-4377-b52d-bdd02fcace13
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/2115_TF1Switzerland.ch.png" tvg-name="TF1Switzerland.ch" group-title="fr", TF 1
 https://api.tv.init7.net/api/live/?channel=0bc3dd67-cdb7-4961-b92e-909966095c28
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/2118_France2.fr.png" tvg-name="France2.fr" group-title="fr", France 2
@@ -135,10 +139,6 @@ https://api.tv.init7.net/api/live/?channel=cdd80d25-4253-4d2b-b8ab-dd0ed7c29662
 https://api.tv.init7.net/api/live/?channel=bf6a14ab-b523-4842-9918-e21cf9bce8c4
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/2508_Gulli.fr.png" tvg-name="Gulli.fr" group-title="fr", Gulli
 https://api.tv.init7.net/api/live/?channel=46cdfdb4-c8c9-48e5-8fa5-500f80dc4cb8
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/3104_RSILa1.ch.png" tvg-name="RSILa1.ch" group-title="it", RSI LA 1
-https://api.tv.init7.net/api/live/?channel=0136cfea-8475-44aa-9347-4144375db8c9
-#EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/3108_RSILa2.ch.png" tvg-name="RSILa2.ch" group-title="it", RSI LA 2
-https://api.tv.init7.net/api/live/?channel=3cb90164-1396-40a1-8a06-8565de46131f
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/3120_TeleTicino.ch.png" tvg-name="TeleTicino.ch" group-title="it", TeleTicino
 https://api.tv.init7.net/api/live/?channel=b5935c16-7348-47b7-983a-35ae4477cd85
 #EXTINF:0 tvg-logo="https://api.tv.init7.net/media/logos/3124_Rai1.it.png" tvg-name="Rai1.it" group-title="it", Rai 1
