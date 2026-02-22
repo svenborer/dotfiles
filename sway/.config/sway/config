@@ -256,7 +256,7 @@ bindsym $mod+Shift+s exec wl-copy < $(grimshot save area)
 bindsym XF86SelectiveScreenshot exec wl-copy < $(grimshot save area)
 bindsym $mod+l exec ~/.local/scripts/lock.sh
 bindsym $mod+Shift+Return exec systemctl suspend; ~/.local/scripts/lock.sh
-
+bindsym $mod+t exec channel=$(cat ~/.local/tv/TV7_HLS.m3u | grep "#EXTINF" | sed 's/.*, //' | tofi --prompt-text="CHANNEL ") && [[ -n "$channel" ]] && grep -A 1 "$channel" ~/.local/tv/TV7_HLS.m3u | tail -n 1 | xargs mpv --title="$channel" 
 exec --no-startup-id fcitx5 -d
 
 exec wlsunset -l 47.5 -L 7.5 -g 0.9
