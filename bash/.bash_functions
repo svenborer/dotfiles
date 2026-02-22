@@ -21,7 +21,3 @@ extract () {
    fi
 }
 
-watch-tv () {
-    cat ~/downloads/TV7_HLS.m3u | grep -i "$1" -A1
-    cat ~/downloads/TV7_HLS.m3u | grep -i "$1" -A1 | tail -n1 | xargs mpv -
-}
