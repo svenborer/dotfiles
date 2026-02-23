@@ -262,7 +262,7 @@ bindsym $mod+c exec cliphist list | tofi --prompt-text="SEARCH " --width 768 --h
 exec --no-startup-id fcitx5 -d
 exec wlsunset -l 47.5 -L 7.5 -g 0.9
 exec swww-daemon
-exec udiskie
+exec udiskie -t --event-hook "$HOME/.local/scripts/mount.sh {event} {mount_path}"
 exec wl-paste --watch cliphist store
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
