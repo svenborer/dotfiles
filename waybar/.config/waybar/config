@@ -34,12 +34,12 @@
     },
     "sway/window": {
       "format": "<span color='#3b3e4c' size='small'>WND</span> {}",
-      "max-length": 75
+      "max-length": 100
     },
     "custom/wireguard": {
-        "format": "<span color='#3b3e4c' size='small'>VPN</span> {}",
-        "exec": "ip route | grep -q wg0 && echo 'ON' || echo 'OFF'",
-        "interval": 60
+      "format": "<span color='#3b3e4c' size='small'>VPN</span> {}",
+      "exec": "ip route | grep -q wg0 && echo 'ON' || echo 'OFF'",
+      "interval": 60
     },
     "network": {
       "interval": 5,
@@ -114,8 +114,8 @@
       "format-stopped": "",
       "interval": 10,
       "state-icons": {
-        "paused": "",
-        "playing": ""
+        "paused": "",
+        "playing": ""
       },
       "tooltip-format": "MPD (connected)",
       "tooltip-format-disconnected": "MPD (disconnected)",
