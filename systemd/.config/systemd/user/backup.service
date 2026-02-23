@@ -2,7 +2,9 @@
 Description=Backup Config 
 
 [Service]
+Type=simple
 ExecStart=/home/sven/.local/scripts/backup.sh
+RemainAfterExit=no
 
 [Install]
 WantedBy=default.target
