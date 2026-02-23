@@ -9,13 +9,6 @@ export HISTCONTROL=ignorespace
 shopt -s histappend
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-alias ls='ls --color=auto'
-alias ll='ls -la'
-alias gs='git status'
-alias gd='git diff'
-alias gds='git diff --staged'
-alias k=kubectl
-
 [[ $PS1 &&
   ! ${BASH_COMPLETION_VERSINFO:-} &&
   -f /usr/share/bash-completion/bash_completion ]] &&
