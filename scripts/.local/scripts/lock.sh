@@ -1,4 +1,5 @@
 #!/bin/bash
+
 swaylock --screenshots --indicator \
     --indicator-radius 100 \
     --indicator-thickness 7 \
@@ -18,6 +19,6 @@ swaylock --screenshots --indicator \
     --line-clear-color EBCB8B \
     --ring-clear-color EBCB8B \
     --bs-hl-color B48EAD \
-    --fade-in 0.3 \
+    --fade-in 1 \
     --effect-blur 5x8 \
     --font "Source Code Pro"

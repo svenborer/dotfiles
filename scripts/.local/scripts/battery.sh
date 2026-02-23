@@ -1,4 +1,5 @@
 #!/bin/bash
+
 acpi -b | grep -v unavailable | awk -F'[,:%]' '{print $2, $3}' | {
     read -r status capacity
     if [ "$status" = Discharging -a "$capacity" -lt 20 ]; then
