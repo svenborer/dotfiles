@@ -27,4 +27,4 @@ alias gs='git status'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias k=kubectl
-alias yt-dlp-x="yt-dlp -x --restrict-filenames -o '%(playlist_autonumber)s-%(title)s-%(id)s.%(ext)s'"
+alias yt-dlp-xp="yt-dlp -x -o '%(playlist_autonumber)s-%(title)s-%(id)s.%(ext)s'"
