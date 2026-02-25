@@ -16,5 +16,6 @@
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "http.systemCertificatesNode": true
+    "http.systemCertificatesNode": true,
+    "diffEditor.codeLens": true
 }
