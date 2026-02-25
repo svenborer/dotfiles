@@ -116,15 +116,15 @@ exec swayidle -w \
 # Workspaces:
 #
     # Switch to workspace
-    bindsym $mod+1 workspace number 1; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+2 workspace number 2; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+3 workspace number 3; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+4 workspace number 4; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+5 workspace number 5; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+6 workspace number 6; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+7 workspace number 7; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+8 workspace number 8; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
-    bindsym $mod+9 workspace number 9; exec swww img $(find ~/.local/wallpapers | shuf -n 1) --transition-type wipe --transition-angle 30 --transition-fps 144 --transition-duration 1
+    bindsym $mod+1 workspace number 1
+    bindsym $mod+2 workspace number 2
+    bindsym $mod+3 workspace number 3
+    bindsym $mod+4 workspace number 4
+    bindsym $mod+5 workspace number 5
+    bindsym $mod+6 workspace number 6
+    bindsym $mod+7 workspace number 7
+    bindsym $mod+8 workspace number 8
+    bindsym $mod+9 workspace number 9
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -266,6 +266,7 @@ exec udiskie -t --event-hook "$HOME/.local/scripts/mount.sh {event} {mount_path}
 exec wl-paste --watch cliphist store
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec swww img $(find ~/.local/wallpapers/ | shuf -n 1)
 
 bindswitch lid:on output eDP-1 disable
 bindswitch lid:off output eDP-1 enable
