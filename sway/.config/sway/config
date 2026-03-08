@@ -244,12 +244,12 @@ default_border none
 
 font pango:SourceCodePro 10
 
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && dunstify -h string:x-dunst-stack-tag:bltaud "Volume > `pactl get-sink-mute @DEFAULT_SINK@ | sed 's/://g' | sed 's/no/Off/g' | sed 's/yes/On/g'`" && brightnessctl --device='platform::mute' set $([[ $(pactl get-source-mute @DEFAULT_SOURCE@ | awk -F' ' '{ print $2 }') == 'yes' ]] && echo 1 || echo 0)
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && dunstify -h string:x-dunst-stack-tag:bltaud "Volume > `pamixer --get-volume`"
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && dunstify -h string:x-dunst-stack-tag:bltaud "Volume > `pamixer --get-volume`"
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl get-sink-mute @DEFAULT_SINK@ | grep -Po '(no|yes)' | sed 's/no/OFF/' | sed 's/yes/ON/' | xargs -I {} dunstify -h string:x-dunst-stack-tag:bltaud "AUD > MUTE {}" && brightnessctl --device='platform::mute' set $([[ $(pactl get-source-mute @DEFAULT_SOURCE@ | awk -F' ' '{ print $2 }') == 'yes' ]] && echo 1 || echo 0)
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+\%' | tail -n1 | grep -Po '[0-9]+' | xargs -I {} dunstify -h string:x-dunst-stack-tag:bltaud "AUD > {}"
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | grep -Po '[0-9]+\%' | tail -n1 | grep -Po '[0-9]+' | xargs -I {} dunstify -h string:x-dunst-stack-tag:bltaud "AUD > {}"
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && brightnessctl --device='platform::micmute' set $([[ $(pactl get-source-mute @DEFAULT_SOURCE@ | awk -F' ' '{ print $2 }') == 'yes' ]] && echo 1 || echo 0)
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && dunstify -h string:x-dunst-stack-tag:bltaud "Backlight > `brightnessctl | grep Current | awk -F"(" '{ print $2 }' | awk -F"%" '{ print $1}'`"
-bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ && dunstify -h string:x-dunst-stack-tag:bltaud "Backlight > `brightnessctl | grep Current | awk -F"(" '{ print $2 }' | awk -F"%" '{ print $1}'`" 
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && brightnessctl | grep Current | awk -F"(" '{ print $2 }' | awk -F"%" '{ print $1}' | xargs -I {} dunstify -h string:x-dunst-stack-tag:bltaud "BLT > {}"
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ && brightnessctl | grep Current | awk -F"(" '{ print $2 }' | awk -F"%" '{ print $1}' | xargs -I {} dunstify -h string:x-dunst-stack-tag:bltaud "BLT > {}" 
 bindsym XF86Display exec [[ $(pgrep wlsunset) ]] && killall wlsunset || wlsunset -l 47.5 -L 7.5 -g 0.9
 bindsym Print exec wl-copy < $(grimshot save area)
 bindsym $mod+Shift+s exec wl-copy < $(grimshot save area)
