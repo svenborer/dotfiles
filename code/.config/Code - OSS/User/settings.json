@@ -4,7 +4,6 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.renderWhitespace": "all",
     "editor.detectIndentation": false,
-    "workbench.colorTheme": "Tokyo Night",
     "editor.minimap.renderCharacters": false,
     "editor.minimap.enabled": true,
     "[javascript]": {
@@ -17,5 +16,9 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "http.systemCertificatesNode": true,
-    "diffEditor.codeLens": true
+    "diffEditor.codeLens": true,
+    "rainbow_csv.autodetect_separators": [
+        ";"
+    ],
+    "workbench.colorTheme": "Tokyo Night"
 }

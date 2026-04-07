@@ -1,0 +1,19 @@
+# Profile for UltraWide 5K displays
+profile {
+    output "*" mode 5120x2160 scale 1.25
+}
+
+# Profile for 4K displays
+profile {
+    output "*" mode 3840x2160 scale 1.25
+}
+
+# Profile for QHD displays
+profile {
+    output "*" mode 2560x1440 scale 1.25
+}
+
+# Default fallback for everything else (1080p, etc.)
+profile {
+    output "*" scale 1.0
+}

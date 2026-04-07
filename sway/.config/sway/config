@@ -252,7 +252,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl set 5%- && brightnessctl | grep
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+ && brightnessctl | grep Current | awk -F"(" '{ print $2 }' | awk -F"%" '{ print $1}' | xargs -I {} dunstify -h string:x-dunst-stack-tag:bltaud "BLT > {}" 
 bindsym XF86Display exec [[ $(pgrep wlsunset) ]] && killall wlsunset || wlsunset -l 47.5 -L 7.5 -g 0.9
 bindsym Print exec wl-copy < $(grimshot save area)
-bindsym $mod+Shift+s exec wl-copy < $(grimshot save area)
+bindsym $mod+Shift+s exec $(grimshot --notify save area - | swappy -f -)
 bindsym XF86SelectiveScreenshot exec wl-copy < $(grimshot save area)
 bindsym $mod+l exec ~/.local/scripts/lock.sh
 bindsym $mod+Shift+Return exec systemctl suspend; ~/.local/scripts/lock.sh
@@ -261,12 +261,13 @@ bindsym $mod+c exec cliphist list | tofi --prompt-text="SEARCH " --width 768 --h
 
 exec --no-startup-id fcitx5 -d
 exec wlsunset -l 47.5 -L 7.5 -g 0.9
-exec swww-daemon
+exec awww-daemon
+exec kanshi
 exec udiskie -t --event-hook "$HOME/.local/scripts/mount.sh {event} {mount_path}"
 exec wl-paste --watch cliphist store
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 exec systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec swww img $(find ~/.local/wallpapers/ | shuf -n 1)
+exec awww img $(find ~/.local/wallpapers/ | shuf -n 1)
 
 bindswitch lid:on output eDP-1 disable
 bindswitch lid:off output eDP-1 enable
