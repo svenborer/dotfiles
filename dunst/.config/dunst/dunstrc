@@ -381,6 +381,7 @@
     appname = "dunstify"
     background = "#0f111a"
     foreground = "#a6accd"
+    timeout = 10
 
 [outlook-emails]
     desktop_entry = "Firefox"

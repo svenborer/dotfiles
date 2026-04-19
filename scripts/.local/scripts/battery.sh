@@ -6,6 +6,6 @@ acpi -b | grep -v unavailable | awk -F'[,:%]' '{print $2, $3}' | {
         DISPLAY=:0 dunstify -h string:x-dunst-stack-tag:battery -u critical "BATTERY LOW > $capacity"
     fi
     if [ "$status" = Discharging -a "$capacity" -lt 10 ]; then
-        mpg123 $HOME/.scripts/low_battery.mp3
+        mpg123 $HOME/.local/scripts/low_battery.mp3
     fi
 }
