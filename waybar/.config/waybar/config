@@ -75,7 +75,7 @@
     "clock": {
       "interval": 10,
       "format": "<span color='#3b3e4c' size='small'>TME</span> {:%H:%M:%S}",
-      "tooltip-format": "{:%d.%m.%y}"
+      "tooltip-format": "{:%y年%m月%d日}"
     }
   },
   {
