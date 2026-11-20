@@ -11,7 +11,7 @@ rsync -avL ~/.bashrc $BACKUP_PATH
 rsync -avL ~/.vimrc $BACKUP_PATH
 rsync -avL --mkpath ~/.config/Code\ -\ OSS/User/settings.json "$BACKUP_PATH/.config/Code - OSS/User/"
 rsync -avL --mkpath --include='wallpapers/***' --include='scripts/***' --exclude='*' ~/.local/ "$BACKUP_PATH/.local/"
-rsync -avLP ~/music/ $MOUNTPOINT/music
+rsync -avLP --size-only ~/music/ $MOUNTPOINT/music
 END=$(date '+%s')
 TIMEDIFF=$(($END-$START))
 dunstify -h string:x-dunst-stack-tag:backup -u normal "Backup Finished (${TIMEDIFF}s) ..."
