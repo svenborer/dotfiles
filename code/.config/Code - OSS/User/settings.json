@@ -1,24 +1,43 @@
 {
-    "editor.fontFamily": "'Source Code Pro', 'Font Awesome 7 Free'",
-    "editor.fontWeight": "600",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.renderWhitespace": "all",
-    "editor.detectIndentation": false,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.enabled": true,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "http.systemCertificatesNode": true,
-    "diffEditor.codeLens": true,
-    "rainbow_csv.autodetect_separators": [
-        ";"
+  "editor.fontFamily": "'Source Code Pro', 'Font Awesome 7 Free'",
+  "editor.fontWeight": "600",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.renderWhitespace": "all",
+  "editor.detectIndentation": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.enabled": true,
+  "diffEditor.codeLens": true,
+  "workbench.colorTheme": "Tokyo Night",
+  "yaml.schemas": {
+    "/home/sven/work/yco/backend-workflow/template-schemas/schemas/deploymenttemplate.json": [
+      "*.dunedpt.yaml",
+      "*.dunedpt.yml",
     ],
-    "workbench.colorTheme": "Tokyo Night"
+    "/home/sven/work/yco/backend-workflow/template-schemas/schemas/resourcegrouptemplate.json": [
+      "*.dunergt.yaml",
+      "*.dunergt.yml",
+    ],
+    "/home/sven/work/yco/backend-workflow/template-schemas/schemas/actiontemplate.json": [
+      "*.duneact.yaml",
+      "*.duneact.yml",
+    ],
+  },
+  "hediet.vscode-drawio.resizeImages": null,
+  "redhat.telemetry.enabled": false,
+  "claudeCode.preferredLocation": "panel",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
 }
