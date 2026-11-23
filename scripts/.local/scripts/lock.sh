@@ -1,6 +1,6 @@
 #!/bin/bash
 
-swaylock --screenshots --indicator \
+swaylock -f --screenshots --indicator \
     --indicator-radius 100 \
     --indicator-thickness 7 \
     --effect-vignette 0.5:0.5 \
