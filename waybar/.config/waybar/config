@@ -90,7 +90,8 @@
       "cpu",
       "memory",
       "disk",
-      "network"
+      "network",
+      "custom/tlp"
     ],
     "network": {
       "interval": 2,
@@ -122,6 +123,11 @@
       "on-click": "mpc toggle",
       "on-scroll-up": "mpc prev",
       "on-scroll-down": "mpc next"
-    }
+    },
+    "custom/tlp": {
+        "format": "<span color='#3b3e4c' size='small'>TLP</span> {}",
+        "exec": "case \"$(tlp-stat -m)\" in \"power-saver/SAV\") echo \"SAV\" ;; \"performance/AC\") echo \"PER\" ;; \"balanced/BAT\") echo \"BAL\" ;; *) echo \"UNKNOWN\" ;; esac",
+        "interval": 60
+    },
   }
 ]

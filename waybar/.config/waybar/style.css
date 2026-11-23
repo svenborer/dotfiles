@@ -40,7 +40,8 @@ window#waybar {
 #window,
 #mpd,
 #clock,
-#bluetooth {
+#bluetooth,
+#custom-tlp {
   margin: 7px;
   color: #a6accd;
 }
